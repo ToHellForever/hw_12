@@ -42,3 +42,13 @@ copy_dict = {key: {**value, 'year': str(value['year'])} for key, value in full_d
 # 7 пункт задания - Используйте `filter`, чтобы получить словари, содержащий только те фильмы, которые начинаются на букву `Ч`.
 filter_dict = list(filter(lambda x: x['title'].startswith('Ч') if x['title'] is not None else False, full_list))
 # pprint(filter_dict)
+
+# 8 пункт задания - Отсортируйте словарь `full_dict` по одному параметру с использованием `lambda`, создавая аналогичный по структуре словарь. Обязательно укажите, по какому параметру вы производите сортировку. 
+# Сортировка по названию фильма (по алффавиту)
+def film_sort(film):    
+    title = film['title']
+    title = title if title else 'без названия'
+    return title
+
+full_list.sort(key=film_sort)
+pprint(full_list)
