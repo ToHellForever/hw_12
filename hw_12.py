@@ -51,4 +51,16 @@ def film_sort(film):
     return title
 
 full_list.sort(key=film_sort)
-pprint(full_list)
+# pprint(full_list)
+
+# 9 пункт задания - Отсортируйте словарь `full_dict` по двум параметрам с использованием `lambda`, создавая аналогичный по структуре словарь. Обязательно укажите, по каким параметрам вы производите сортировку.
+# Сортировка по году выпуска и названию фильма (сначала по году, потом по алфавиту)
+def film_sort_two(film):    
+    title = film['title']
+    year = film['year']
+    title = title if title else 'без названия'
+    year = year if isinstance(year, int) else 0
+    return year, title
+
+full_list.sort(key=film_sort_two)
+# pprint(full_list)
