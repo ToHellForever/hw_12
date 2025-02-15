@@ -30,3 +30,7 @@ full_list = [{"id": film_id, **film} for film_id, film in full_dict.items()]
 # 4 пункт задания - с помощью filter создаю список содержащий исходные id и ключи словаря full_dict, id должны быть те, которые есть в списке list_number
 list_id = list(filter(lambda x: x['id'] in list_number, full_list))
 # pprint(list_id)
+
+# 5 пункт задания - Создайю множество с помощью `set comprehension`, собрав уникальные значения ключа `director` из словаря.
+set_director = {film['director'] for film in full_list}
+pprint(set_director)
