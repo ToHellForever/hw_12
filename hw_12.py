@@ -38,3 +38,7 @@ set_director = {film['director'] for film in full_list}
 # 6 пункт задания - С помощью `dict comprehension` создайте копию исходного словаря `full_dict`, преобразовав каждое значение `'year'` в строку.
 copy_dict = {key: {**value, 'year': str(value['year'])} for key, value in full_dict.items()}
 # pprint(copy_dict)
+
+# 7 пункт задания - Используйте `filter`, чтобы получить словари, содержащий только те фильмы, которые начинаются на букву `Ч`.
+filter_dict = list(filter(lambda x: x['title'].startswith('Ч') if x['title'] is not None else False, full_list))
+# pprint(filter_dict)
