@@ -33,4 +33,8 @@ list_id = list(filter(lambda x: x['id'] in list_number, full_list))
 
 # 5 пункт задания - Создайю множество с помощью `set comprehension`, собрав уникальные значения ключа `director` из словаря.
 set_director = {film['director'] for film in full_list}
-pprint(set_director)
+# pprint(set_director)
+
+# 6 пункт задания - С помощью `dict comprehension` создайте копию исходного словаря `full_dict`, преобразовав каждое значение `'year'` в строку.
+copy_dict = {key: {**value, 'year': str(value['year'])} for key, value in full_dict.items()}
+# pprint(copy_dict)
