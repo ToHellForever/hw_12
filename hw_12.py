@@ -64,3 +64,8 @@ def film_sort_two(film):
 
 full_list.sort(key=film_sort_two)
 # pprint(full_list)
+
+# 10 пункт задания - Напишите однострочник, который отфильтрует и отсортирует `full_dict` с использованием `filter` и `sorted`.
+# Фильтрация по году , а потом сортировка 
+sorted_2023 = list(sorted(filter(lambda film: film['year'] == 2023, full_list), key=lambda film: film['title']))
+# pprint(sorted_2023)
